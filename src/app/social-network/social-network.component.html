@@ -1,0 +1,18 @@
+<!-- SUIVEZ-MOI -->
+<section id="reseaux" class="py-20">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold">Suivez-moi</h2>
+    <p class="text-lg text-gray-600 mt-2">Restez connectés sur mes plateformes sociales.</p>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-4xl mx-auto">
+    <div *ngFor="let socialNetwork of SocialNetworkList">
+      <a [href]="socialNetwork?.url" class="group" target="_blank" rel="nofollow">
+        <div
+          class="p-6 border-2 border-gray-300 rounded-lg transform group-hover:-translate-y-2 group-hover:shadow-xl transition-all duration-300">
+          <i [class]="socialNetwork?.iconUrl"></i>
+          <h4 class="text-xl font-bold mt-4">{{socialNetwork?.name}}</h4>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

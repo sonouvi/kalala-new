@@ -1,0 +1,81 @@
+<!-- CONTACT -->
+<section id="contact" class="py-20 presentation">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold">Contact</h2>
+  <div class="content">
+    <h2>🎶 Faites appel à <span>Kalala Soul</span></h2>
+    <p>
+      Vous souhaitez faire appel à <b>Kalala Soul</b> pour un événement musical ?<br>
+      Le groupe se produit en concert dans des contextes variés :
+    </p>
+
+    <ul>
+      <li>Mariages</li>
+      <li>Premières parties</li>
+      <li>Soirées privées ou professionnelles</li>
+      <li>Festivals</li>
+      <li>Événements culturels ou associatifs</li>
+    </ul>
+
+    <p>
+      Avec une formule live chaleureuse mêlant <b>voix, guitare, basse</b>,
+      <b>Kalala Soul</b> propose une ambiance unique, à la fois intimiste et vibrante,
+      qui s’adapte à votre univers et à votre public.
+    </p>
+
+    <div class="cta">
+      <h3>📩 Demande de prestation</h3>
+      <p>
+        Pour toute demande de <b>prestation, devis ou informations complémentaires</b>,
+        n’hésitez pas à nous écrire via le formulaire ci-dessous.
+      </p>
+      <p><b>Merci de préciser :</b></p>
+      <ul>
+        <li>La nature de l’événement</li>
+        <li>La date et le lieu</li>
+        <li>Vos besoins techniques ou logistiques particuliers</li>
+      </ul>
+      <p>Nous vous répondrons dans les plus brefs délais.</p>
+    </div>
+  </div>
+  </div>
+  <form class="max-w-2xl mx-auto" [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+    <div class="mb-4">
+      <label for="name" class="block text-gray-700 font-bold mb-2">Nom</label>
+      <input type="text" formControlName="name" id="name"
+        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+      <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error">
+        Le nom est obligatoire.
+      </div>
+    </div>
+    <div class="mb-4">
+      <label for="email" class="block text-gray-700 font-bold mb-2">Adresse Email</label>
+      <input type="email" formControlName="email" id="email"
+        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+      <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error">
+        Entrez un email valide.
+      </div>
+    </div>
+    <div class="mb-4">
+      <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+      <textarea id="message" formControlName="message" rows="5"
+        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+      <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error">
+        Le message est obligatoire.
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="submit" [disabled]="contactForm.invalid || isLoading"
+        class="bg-gray-800 text-white font-bold py-3 px-8 rounded-lg hover:bg-black transition-colors">
+        <span *ngIf="!isLoading">Envoyer</span>
+        <span *ngIf="isLoading">⏳ Envoi...</span>
+      </button>
+    </div>
+  </form>
+
+  <!-- Message de confirmation/erreur -->
+  <div *ngIf="statusMessage" class="status" [ngClass]="{success: isSuccess, error: !isSuccess}"
+    [@fade]="showMessage ? 'visible' : 'hidden'">
+    {{ statusMessage }}
+  </div>
+</section>

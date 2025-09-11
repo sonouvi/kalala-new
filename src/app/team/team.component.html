@@ -1,0 +1,16 @@
+        <!-- L'ÉQUIPE -->
+        <section id="equipe" class="py-20">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">L'équipe</h2>
+                <p class="text-lg text-gray-600 mt-2">Les personnes incroyables qui m'accompagnent.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div *ngFor="let member of teamMembers">
+                    <img [src]="member.photoUrl" class="w-40 h-40 mx-auto rounded-full shadow-xl" alt="Membre 1">
+                    <h4 class="text-xl font-bold mt-4">{{member.name}}</h4>
+                    <p class="text-gray-500">{{member.role}}</p>
+                    <p class="text-gray-500">{{member.socialNetwork}}</p>
+                </div>
+            </div>
+        </section>
+
