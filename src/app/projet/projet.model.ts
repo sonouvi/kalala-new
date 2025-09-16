@@ -14,7 +14,7 @@ export const LISTE_PROJETS: Projet[] = [
       "Courte description du projet. Le style, les thèmes abordés, l'ambiance générale",
     imageUrl:
       'assets/images/lafeteselonkalala.jpg',
-    link: 'https://example.com/projet1'
+    link: 'https://www.youtube.com/watch?v=HEmDDtAkIeU&list=PL79mTBuCt2uC_flHWuh0dos5VwpF5cW-s'
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const LISTE_PROJETS: Projet[] = [
       "Courte description du projet. Le style, les thèmes abordés, l'ambiance générale",
     imageUrl:
       'assets/images/sommeil.jpg',
-    link: 'https://example.com/projet2'
+    link: 'https://www.youtube.com/watch?v=-eFAAJN4VDg'
   },
   {
     id: 3,
@@ -32,6 +32,6 @@ export const LISTE_PROJETS: Projet[] = [
       "Courte description du projet. Le style, les thèmes abordés, l'ambiance générale",
     imageUrl:
       'assets/images/jolibody.jpg',
-    link: 'https://example.com/projet3'
+    link: 'https://www.youtube.com/watch?v=kDMQvr4l3aU'
   }
 ];
