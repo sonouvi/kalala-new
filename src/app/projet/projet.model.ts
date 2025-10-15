@@ -18,12 +18,12 @@ export const LISTE_PROJETS: Projet[] = [
   },
   {
     id: 2,
-    title: "Sommeil",
+    title: "Escale RnB",
     description:
       "Courte description du projet. Le style, les thèmes abordés, l'ambiance générale",
     imageUrl:
-      'assets/images/sommeil.jpg',
-    link: 'https://www.youtube.com/watch?v=-eFAAJN4VDg'
+      'assets/images/escale.jpg',
+    link: 'https://www.youtube.com/watch?v=NoEYZhKKdk8&list=PL79mTBuCt2uAQzFzDc_vodeI4vOyzXAUY'
   },
   {
     id: 3,

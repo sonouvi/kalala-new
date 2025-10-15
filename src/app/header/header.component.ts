@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import SwiperCore, { Swiper } from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
@@ -10,10 +10,10 @@ SwiperCore.use([Navigation, Pagination]);
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements AfterViewInit {
+export class HeaderComponent implements OnInit {
 
-  ngAfterViewInit(): void {
-    const swiper = new Swiper('.swiper', {
+  ngOnInit() {
+    new Swiper('.swiper', {
       loop: true,
       autoplay: {
         delay: 2000,

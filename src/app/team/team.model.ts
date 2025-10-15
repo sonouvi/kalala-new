@@ -9,7 +9,7 @@ export interface teamMember {
 export const LISTE_MEMBRES: teamMember[] = [
   {
     id: 1,
-    name: 'Kalala',
+    name: 'Elise',
     role: 'Chanteuse',
     photoUrl: 'assets/images/kalala.jpg',
     socialNetwork: 'https://instagram.com/alice'
@@ -32,7 +32,7 @@ export const LISTE_MEMBRES: teamMember[] = [
     id: 4,
     name: 'Ophélie',
     role: 'Manager',
-    photoUrl: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600',
+    photoUrl: 'assets/images/ophelie.jpg',
     socialNetwork: 'https://instagram.com/alice'
   }
 ];
